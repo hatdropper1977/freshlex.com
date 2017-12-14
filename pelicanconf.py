@@ -4,7 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = 'John Sobanski'
 SITENAME = 'FreshLex, LLC'
-SITEURL = 'https://freshlex.com'
+#SITEURL = 'https://freshlex.com'
+SITEURL = ''
 
 PATH = 'content'
 
@@ -41,9 +42,9 @@ AUTHORS_BIO = {
     "name": "John Sobanski",
     "cover": "http://1.gravatar.com/avatar/d9333b82b60f9f3714a39f9aad419633?s=75&d=mm&r=g",
     "image": "http://1.gravatar.com/avatar/d9333b82b60f9f3714a39f9aad419633?s=75&d=mm&r=g",
-    "website": "http://blog.arulraj.net",
+    "website": "https://github.com/hatdropper1977/freshlex.com",
     "location": "Washington, DC",
-    "bio": "Electrical Engineer turned Cloud Architect.<p><img src=\'https://d5q4akjun1yjt.cloudfront.net/assets/download.png\' alt=\'Cert\'></p><p>Amazon Web Services Certified Solution Architect Associate</p><p>License AWS-ASA-18116 (July 1st 2016 – July 1st 2018)</p>"
+    "bio": "Electrical Engineer turned Cloud Architect.<p><img src=\'https://d5q4akjun1yjt.cloudfront.net/assets/download.png\' alt=\'Cert\'></p><p>License AWS-ASA-18116 (July 1st 2016 – July 1st 2018)</p>"
   }
 }
 

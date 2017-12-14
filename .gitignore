@@ -3,6 +3,9 @@ bin/
 include/
 lib/
 lib64/
+lib64
 output/
 *.pyc
 pip-selfcheck.json
+.gitignore
+pelicanconf.py
