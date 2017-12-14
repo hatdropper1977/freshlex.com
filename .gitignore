@@ -1,0 +1,8 @@
+attila/
+bin/
+include/
+lib/
+lib64/
+output/
+*.pyc
+pip-selfcheck.json
