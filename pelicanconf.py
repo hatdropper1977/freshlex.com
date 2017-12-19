@@ -3,31 +3,30 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'John Sobanski'
-SITENAME = 'FreshLex, LLC'
-#SITEURL = 'https://freshlex.com'
-SITEURL = ''
+SITENAME = 'Coins N\' Clouds'
+SITEURL = 'https://www.freshlex.com'
+#SITEURL = ''
 
 PATH = 'content'
 
 TIMEZONE = 'America/New_York'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
+#FEED_ALL_ATOM = None
+#CATEGORY_FEED_ATOM = None
+#TRANSLATION_FEED_ATOM = None
+#AUTHOR_FEED_ATOM = None
+#AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Let\'s Encrypt', 'https://letsencrypt.org/'),
          ('Jinja2', 'http://jinja.pocoo.org/'),
          ('Amazon Web Services', 'https://aws.amazon.com/'),)
 
 # Social widget
-SOCIAL = (('GitHub', 'https://github.com/hatdropper1977'), )
+SOCIAL = (('github', 'https://github.com/hatdropper1977'), )
 
 DEFAULT_PAGINATION = 10
 
@@ -49,7 +48,16 @@ AUTHORS_BIO = {
 }
 
 #Comments
-DISQUS_SITENAME = 'www.freshlex.com'
+DISQUS_SITENAME = 'freshlex'
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+#Github
+GITHUB_URL = 'https://github.com/hatdropper1977/freshlex.com'
+
+#MENUITEMS = [('all', '/blog/archives.html')]
+MENUITEMS = (
+             ('Fork me on GitHub!', 'https://github.com/hatdropper1977/freshlex.com'),
+             ('AWS Architecture', '/category/howto'),
+             ('Coins', '/category/coins'),
+             ('Data Science', '/category/data-science'),
+             ('Protocols', '/category/ietf'),
+)
