@@ -8,7 +8,7 @@ Status: published
 
 In this HOWTO, we expand upon the simple Elasticsearch proxy we deployed in [our first Lambda tutorial]({filename}/connect_aws_lambda_to_elasticsearch.md).
 
-In [that tutorial]({filename}/connect_aws_lambda_to_elasticsearch.md), we showed you how to create a proxy in front of the [AWS Elasticsearch service](https://aws.amazon.com/elasticsearch-service/) using a Lambda function and an API Gateway.  We used [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) policies to sign and encrypt the communication between your Lambda function and the Elasticsearch service.  
+In [that tutorial]({filename}/connect_aws_lambda_to_elasticsearch.md), we showed you how to create a proxy in front of the [AWS Elasticsearch service](https://aws.amazon.com/elasticsearch-service/) usingÂ a Lambda function and anÂ API Gateway. Â We used [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) policies to sign and encrypt the communication between your Lambda function and the Elasticsearch service. Â 
 
 This HOWTO builds upon that simple use case.  In this HOWTO, we extend the API gateway to proxy user requests to the downstream Elasticsearch [Application Programming Interface (API)](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update.html).  
 
@@ -24,7 +24,7 @@ The Agenda for this HOWTO follows
   2.  Deploy and configure an AWS Elasticsearch endpoint using the AWS CLI
   3.  Create an app that receives, validates and submits a Document to your Elasticsearch endpoint
   4.  Use Chalice to deploy your Lambda function and create/ attach an API gateway
-  5.  Test drive your new Elasticsearch proxy
+  5.  Test driveÂ your new Elasticsearch proxy
 
 ### 1. Create and configure your AWS development environment  
 
@@ -200,7 +200,7 @@ Chalice deploys an API Gateway that reflects the logic you included in **app.py*
 Chalice also deploys an IAM Role and Policy for your Lambda Function:
 ![IAM_ROLE]({filename}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/IAM_Role.png)
 
-### 5. Test drive your new Elasticsearch proxy
+### 5. Test driveÂ your new Elasticsearch proxy
 
 You can use **httpie** to test out your new API gateway.  By default, **httpie** encodes POST data as **Content-Type = application/json**.  The syntax below ensures we match the proper schema for **bigsurvey**.  The **colon equals** syntax for **agree** and **anumber** ensures **httpie** sends a boolean value and numeric to the API gateway.  You can experiment with changing these to strings, and you will observe the API gateway refuses the data.
 
