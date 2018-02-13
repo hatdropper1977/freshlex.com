@@ -123,16 +123,16 @@ Ensure that you are in your Python working directory.  Now, pull our example Cha
 
 This pulls the source code for a working Chalice package.  If you change directories and enter eslambda, you will find the following important components.
 
- * [app.py](https://github.com/hatdropper1977/eslambda/blob/master/app.py)
-  * This contains the main Lambda application.  The application validates a JSON Document, creates a random Document ID and then chucks the Document to our Elasticsearch document store.  The application's structure should look familiar to those developers that have experience with [Flask]({filename}/part-2-let-internet-facing-forms-update-elasticsearch-via-flask.md).
- * [chalicelib\config.py](https://github.com/hatdropper1977/eslambda/blob/master/chalicelib/config.py)
-  * This module includes the configuration for your development environment.  The [Chalice documentation](http://chalice.readthedocs.io/en/latest/topics/multifile.html) instructs you to include any additional Python files in the **chalicelib** directory.  Be sure to update **ELASTICSEARCH_ENDPOINT** with your Elasticsearch endpoint's URL.  
- * [requirements.txt](https://github.com/hatdropper1977/eslambda/blob/master/requirements.txt)
-  * Similar to [Elastic Beanstalk ](https://aws.amazon.com/elasticbeanstalk/), Chalice uses **requirements.txt** to ensure the Lambda function includes all the required packages.  **jsonschema**, unfortunately, requires **functools**, which cannot be installed via **pip**.  If you attempt to deploy your Chalice package using just **requirements.txt**, you will get the following error: **Could not install dependencies: functools==3.2.  You will have to build these yourself and vendor them in the chalice vendor folder.**  This brings us to the next bullet...
- * [vendor/functools32](https://github.com/hatdropper1977/eslambda/tree/master/vendor)
-  * **Pip** will not find wheel files for **functools**, a dependency for **jsonschema**.  To solve this problem, I followed the instructions on the [official Chalice documentation](http://chalice.readthedocs.io/en/latest/topics/packaging.html) and built a wheel file appropriate for Amazon Linux.  I then unzipped it into the **vendor** directory.  You're welcome.
- * [.chalice/policy-dev.json](https://github.com/hatdropper1977/eslambda/blob/master/.chalice/policy-dev.json)
-  * This IAM policy allows your lambda function to execute GET, HEAD, POST and PUT on your Elasticsearch domain, and to log activity.
+  * [app.py](https://github.com/hatdropper1977/eslambda/blob/master/app.py)
+    * This contains the main Lambda application.  The application validates a JSON Document, creates a random Document ID and then chucks the Document to our Elasticsearch document store.  The application's structure should look familiar to those developers that have experience with [Flask]({filename}/part-2-let-internet-facing-forms-update-elasticsearch-via-flask.md).
+  * [chalicelib\config.py](https://github.com/hatdropper1977/eslambda/blob/master/chalicelib/config.py)
+    * This module includes the configuration for your development environment.  The [Chalice documentation](http://chalice.readthedocs.io/en/latest/topics/multifile.html) instructs you to include any additional Python files in the **chalicelib** directory.  Be sure to update **ELASTICSEARCH_ENDPOINT** with your Elasticsearch endpoint's URL.  
+  * [requirements.txt](https://github.com/hatdropper1977/eslambda/blob/master/requirements.txt)
+    * Similar to [Elastic Beanstalk ](https://aws.amazon.com/elasticbeanstalk/), Chalice uses **requirements.txt** to ensure the Lambda function includes all the required packages.  **jsonschema**, unfortunately, requires **functools**, which cannot be installed via **pip**.  If you attempt to deploy your Chalice package using just **requirements.txt**, you will get the following error: **Could not install dependencies: functools==3.2.  You will have to build these yourself and vendor them in the chalice vendor folder.**  This brings us to the next bullet...
+  * [vendor/functools32](https://github.com/hatdropper1977/eslambda/tree/master/vendor)
+    * **Pip** will not find wheel files for **functools**, a dependency for **jsonschema**.  To solve this problem, I followed the instructions on the [official Chalice documentation](http://chalice.readthedocs.io/en/latest/topics/packaging.html) and built a wheel file appropriate for Amazon Linux.  I then unzipped it into the **vendor** directory.  You're welcome.
+  * [.chalice/policy-dev.json](https://github.com/hatdropper1977/eslambda/blob/master/.chalice/policy-dev.json)
+    * This IAM policy allows your lambda function to execute GET, HEAD, POST and PUT on your Elasticsearch domain, and to log activity.
 
 Before we move on, please make sure that you edited **config.py** to reflect your Elasticsearch endpoint.  You can find this in the Elasticsearch console, under the **elastic** domain.  Leave off **https://** and the trailing slash.
 
@@ -200,7 +200,7 @@ Chalice deploys an API Gateway that reflects the logic you included in **app.py*
 Chalice also deploys an IAM Role and Policy for your Lambda Function:
 ![IAM_ROLE]({filename}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/IAM_Role.png)
 
-###5. Test drive your new Elasticsearch proxy
+### 5. Test drive your new Elasticsearch proxy
 
 You can use **httpie** to test out your new API gateway.  By default, **httpie** encodes POST data as **Content-Type = application/json**.  The syntax below ensures we match the proper schema for **bigsurvey**.  The **colon equals** syntax for **agree** and **anumber** ensures **httpie** sends a boolean value and numeric to the API gateway.  You can experiment with changing these to strings, and you will observe the API gateway refuses the data.
 
@@ -219,6 +219,6 @@ Type in **bigsurvey** for your index pattern and **@timestamp** for the Time Fil
 Now go to the **Discover** tab.  You will see the Document that **HTTPIE** just posted to our API gateway.
 ![Kibana_Discover]({filename}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/Kibana_Discover.png)
 
-###Conclusion
+### Conclusion
 
 Congrats!  You used Chalice to deploy an Elasticsearch proxy that validates a JSON Document before it posts to a private Elasticsearch document store.  You can easily extend my example to accomodate other user stories.
