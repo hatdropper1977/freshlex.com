@@ -16,7 +16,7 @@ This HOWTO builds upon that simple use case.  In this HOWTO, we extend the API g
 
 A user POSTS a JSON encoded Elasticsearch [Document](https://www.elastic.co/guide/en/elasticsearch/guide/master/document.html) to our API gateway.  The API gateway then validates the JSON against an authoritative schema, and if the Document passes, the API gateway will send the Document to our document store over an encrypted channel.  
 
-The API gateway blocks all other access to our Elasticsearch services\' indices, methods and endpoints.
+The API gateway blocks all other access to our Elasticsearch services' indices, methods and endpoints.
 
 The Agenda for this HOWTO follows
 
@@ -118,7 +118,7 @@ We use [Chalice](https://github.com/awslabs/chalice/blob/master/README.rst) to c
 Ensure that you are in your Python working directory.  Now, pull our example Chalice package from [Github](https://github.com/hatdropper1977/eslambda):
 
 ```bash
-(working)[working]$ git clone git@github.com:hatdropper1977/eslambda.git
+(working)[working]$ git clone https://github.com/hatdropper1977/eslambda.git
 ```
 
 This pulls the source code for a working Chalice package.  If you change directories and enter eslambda, you will find the following important components.
