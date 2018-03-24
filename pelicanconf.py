@@ -7,9 +7,9 @@ SITENAME = 'Coins N\' Clouds'
 #SITEURL = 'https://www.freshlex.com'
 SITEURL = 'http://52.54.218.55:8000'
 #HEADER_COVER = 'images/sobanski.jpg'
-#COLOR_SCHEME_CSS = 'monokai.css'
+COLOR_SCHEME_CSS = 'monokai.css'
 
-#PROFILE_IMAGE_URL="http://1.gravatar.com/avatar/d9333b82b60f9f3714a39f9aad419633?s=75&d=mm&r=g"
+#PROFILE_IMAGE_URL='images/bsod.jpg'
 
 PATH = 'content'
 
@@ -44,13 +44,13 @@ TAGS_SAVE_AS = 'tags.html'
 AUTHORS_BIO = {
   "jsobanski": {
     "name": "John Sobanski",
-    "cover": "http://1.gravatar.com/avatar/d9333b82b60f9f3714a39f9aad419633?s=75&d=mm&r=g",
-    "image": "http://1.gravatar.com/avatar/d9333b82b60f9f3714a39f9aad419633?s=75&d=mm&r=g",
+    "cover": "https://raw.githubusercontent.com/hatdropper1977/freshlex.com/master/content/images/bsod_cropped.jpg",
+    "image": "https://raw.githubusercontent.com/hatdropper1977/freshlex.com/master/content/images/sobanski.jpg",
     "website": "https://github.com/hatdropper1977/freshlex.com",
     "location": "Washington, DC",
     "bio": "Electrical Engineer turned Cloud Architect.<p><img src=\'https://d5q4akjun1yjt.cloudfront.net/assets/download.png\' alt=\'Cert\'></p><p>License AWS-ASA-18116 (July 1st 2016 – July 1st 2018)</p>",
-    "linkedin": "https://www.linkedin.com/in/johnsobanski/",
-    "github": "https://github.com/hatdropper1977",
+    #"linkedin": "https://www.linkedin.com/in/johnsobanski/",
+    #"github": "https://github.com/hatdropper1977",
   }
 }
 
