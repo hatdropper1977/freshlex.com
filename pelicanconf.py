@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = 'John Sobanski'
 SITENAME = 'Coins N\' Clouds'
-#SITEURL = 'https://www.freshlex.com'
-SITEURL = 'http://52.54.218.55:8000'
+SITEURL = 'https://www.freshlex.com'
+#SITEURL = 'http://52.54.218.55:8000'
 #HEADER_COVER = 'images/sobanski.jpg'
 COLOR_SCHEME_CSS = 'monokai.css'
 

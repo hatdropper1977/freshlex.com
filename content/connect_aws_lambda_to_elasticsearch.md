@@ -10,7 +10,7 @@ Amazon Web Services' (AWS) [Lambda](https://aws.amazon.com/lambda/) provides a 
 
 In this HOWTO I show you how to create a proxy in front of the [AWS Elasticsearch service](https://aws.amazon.com/elasticsearch-service/) using a Lambda function and an API Gateway.  We use [Identity and Access Management  (IAM)](https://aws.amazon.com/iam/) policies to sign and encrypt the communication between your Lambda function and  the Elasticsearch service.  This HOWTO serves as a simple starting point.
  
-Once you successfully jump through the hoops to connect Lambda to Elasticsearch, you can easily grow your application to accommodate new features and services.
+Once you successfully jump through the hoops to connect Lambda to Elasticsearch, you can easily grow your application to accommodate new features and services. In the second [HOWTO]({filename}/deploy_an_advanced_elasticsearch_proxy_with_lambda.md), for example, I demonstrate how to [validate and publish documents to Elasticsearch]({filename}/deploy_an_advanced_elasticsearch_proxy_with_lambda.md).
 
 The agenda for this HOWTO follows:
 
@@ -273,4 +273,8 @@ From the command line, use ***httpie*** to access your new proxy.
  
 ![Victory]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/victory-1024x462.png)
  
-Congratulations!  Your Lambda function can hit your Elasticsearch service!
+Congratulations!  Your Lambda function can hit your [Elasticsearch](https://www.freshlex.com/tag/elasticsearch.html) service!
+
+I encourage you to proceed to the second [HOWTO]({filename}/deploy_an_advanced_elasticsearch_proxy_with_lambda.md) of this series, which demonstrates how to use this approach to [recieve, validate and persist Elasticsearch documents to the document store]({filename}/deploy_an_advanced_elasticsearch_proxy_with_lambda.md).
+
+In addition, you may want to learn how to [backup the AWS provided Elasticsearch service to S3]({filename}/part-6-backup-aws-provided-elasticsearch-to-amazon-simple-storage-service.md) or add ***@Timestamp*** to your [Python Elasticsearch DSL Model](add-timestamp-to-your-python-elasticsearch-dsl-model.md).
