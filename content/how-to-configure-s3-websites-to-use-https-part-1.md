@@ -1,6 +1,6 @@
 Title: How to enable HTTPS with Naked Domain and Protocol Redirects on your S3 Website (Part One)
 Date: 2018-05-12 10:26
-Author: John Sobanski
+Author: jsobanski
 Category: HOWTO
 Tags: AWS, HOWTO, IAM, S3, Certificate Manager
 Slug: how-to-configure-s3-websites-to-use-https-part-1

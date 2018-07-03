@@ -9,29 +9,11 @@ SITEURL = 'https://www.freshlex.com'
 #HEADER_COVER = 'images/sobanski.jpg'
 COLOR_SCHEME_CSS = 'monokai.css'
 
-#PROFILE_IMAGE_URL='images/bsod.jpg'
-
 PATH = 'content'
 
 TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = 'en'
-
-# Feed generation is usually not desired when developing
-#FEED_ALL_ATOM = None
-#CATEGORY_FEED_ATOM = None
-#TRANSLATION_FEED_ATOM = None
-#AUTHOR_FEED_ATOM = None
-#AUTHOR_FEED_RSS = None
-
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('Amazon Web Services', 'https://aws.amazon.com/'),)
-
-# Social widget
-SOCIAL = (('github', 'https://github.com/hatdropper1977'),
-          ('linkedin', 'https://www.linkedin.com/in/johnsobanski/'))
 
 DEFAULT_PAGINATION = 10
 
@@ -44,23 +26,19 @@ TAGS_SAVE_AS = 'tags.html'
 AUTHORS_BIO = {
   "jsobanski": {
     "name": "John Sobanski",
-    "cover": "https://raw.githubusercontent.com/hatdropper1977/freshlex.com/master/content/images/bsod_cropped.jpg",
-    "image": "https://raw.githubusercontent.com/hatdropper1977/freshlex.com/master/content/images/sobanski.jpg",
+    "cover": "https://www.freshlex.com/images/bsod_cropped.jpg",
+    "image": "https://www.freshlex.com/images/sobanski.jpg",
     "website": "https://github.com/hatdropper1977/freshlex.com",
     "location": "Washington, DC",
-    "bio": "Electrical Engineer turned Cloud Architect.<p><img src=\'https://d5q4akjun1yjt.cloudfront.net/assets/download.png\' alt=\'Cert\'></p><p>License AWS-ASA-18116 (July 1st 2016 – July 1st 2018)</p>",
-    #"linkedin": "https://www.linkedin.com/in/johnsobanski/",
-    #"github": "https://github.com/hatdropper1977",
+    "bio": "Electrical Engineer turned Cloud Architect.<p><img src=\'https://www.freshlex.com/images/AWS_Badge.png\' alt=\'Cert\'></p><p>License <a href=\'https://aw.certmetrics.com/amazon/public/verification.aspx\'>R25L4B4K1FF1Q9WP</a> (July 1st 2016, Re-certified June 29th 2018)",
+    "linkedin": "johnsobanski/",
+    "github": "hatdropper1977",
   }
 }
 
 #Comments
 DISQUS_SITENAME = 'freshlex'
 
-#Github
-GITHUB_URL = 'https://github.com/hatdropper1977/freshlex.com'
-
-#MENUITEMS = [('all', '/blog/archives.html')]
 MENUITEMS = (
              ('Fork me on GitHub!', 'https://github.com/hatdropper1977/freshlex.com'),
              ('AWS Architecture', '/category/howto'),
